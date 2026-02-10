@@ -31,7 +31,7 @@ const Navbar = () => {
     >
       <div className="container max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
         <a href="#" className="text-xl font-bold text-gradient font-heading">
-          {"<SeuNome />"}
+          {"<AdamTech />"}
         </a>
 
         {/* Desktop */}
