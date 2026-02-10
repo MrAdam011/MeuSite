@@ -9,10 +9,38 @@ import { toast } from "sonner";
 const ContactSection = () => {
   const [form, setForm] = useState({ nome: "", email: "", mensagem: "" });
 
+  // ========================================
+  // CONFIGURE SEUS DADOS AQUI:
+  // ========================================
+  const SEUS_DADOS = {
+    email: "johnadammax@gmail.com",           // Seu email real
+    whatsapp: "5511948089514",               // Formato: 55 + DDD + número (sem espaços, hífens ou parênteses)
+    telefone: "+55 (11) 94808-9514",        // Para exibição
+    localizacao: "Campo Maior, Brasil"       // Sua cidade
+  };
+  // ========================================
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Mensagem enviada! Entrarei em contato em breve.");
+    
+    // Cria a mensagem formatada para WhatsApp
+    const mensagemWhatsApp = `*Novo contato do site*%0A%0A*Nome:* ${form.nome}%0A*Email:* ${form.email}%0A*Mensagem:*%0A${form.mensagem}`;
+    
+    // Abre WhatsApp com a mensagem pré-preenchida
+    window.open(`https://wa.me/${SEUS_DADOS.whatsapp}?text=${mensagemWhatsApp}`, '_blank');
+    
+    toast.success("Redirecionando para WhatsApp...");
     setForm({ nome: "", email: "", mensagem: "" });
+  };
+
+  const handleEmailClick = () => {
+    // Abre o cliente de email padrão
+    window.location.href = `mailto:${SEUS_DADOS.email}`;
+  };
+
+  const handleWhatsAppClick = () => {
+    // Abre o WhatsApp diretamente
+    window.open(`https://wa.me/${SEUS_DADOS.whatsapp}`, '_blank');
   };
 
   return (
@@ -44,18 +72,41 @@ const ContactSection = () => {
             </p>
 
             <div className="space-y-4">
-              {[
-                { icon: Mail, label: "johnadammax@gmail.com" },
-                { icon: Phone, label: "+55 (11) 94808-9514" },
-                { icon: MapPin, label: "Campo-Maior, Brasil" },
-              ].map((item) => (
-                <div key={item.label} className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center">
-                    <item.icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <span className="text-sm text-muted-foreground">{item.label}</span>
+              {/* Email - clicável */}
+              <button 
+                onClick={handleEmailClick}
+                className="flex items-center gap-3 w-full text-left hover:bg-secondary/50 p-2 rounded-lg transition-colors group"
+              >
+                <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <Mail className="w-5 h-5 text-primary" />
                 </div>
-              ))}
+                <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                  {SEUS_DADOS.email}
+                </span>
+              </button>
+
+              {/* WhatsApp - clicável */}
+              <button 
+                onClick={handleWhatsAppClick}
+                className="flex items-center gap-3 w-full text-left hover:bg-secondary/50 p-2 rounded-lg transition-colors group"
+              >
+                <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <Phone className="w-5 h-5 text-primary" />
+                </div>
+                <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                  {SEUS_DADOS.telefone}
+                </span>
+              </button>
+
+              {/* Localização - apenas visual */}
+              <div className="flex items-center gap-3 p-2">
+                <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center">
+                  <MapPin className="w-5 h-5 text-primary" />
+                </div>
+                <span className="text-sm text-muted-foreground">
+                  {SEUS_DADOS.localizacao}
+                </span>
+              </div>
             </div>
           </motion.div>
 
@@ -91,7 +142,7 @@ const ContactSection = () => {
             />
             <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 glow-border">
               <Send className="w-4 h-4 mr-2" />
-              Enviar Mensagem
+              Enviar via WhatsApp
             </Button>
           </motion.form>
         </div>
