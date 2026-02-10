@@ -26,7 +26,7 @@ const HeroSection = () => {
 
           {/* Name */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4">
-            <span className="text-foreground">Seu Nome</span>
+            <span className="text-foreground">John Adam</span>
           </h1>
 
           {/* Tagline */}
