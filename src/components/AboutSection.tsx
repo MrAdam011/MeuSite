@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 
 const skills = [
   { name: "React / Next.js", level: 90 },
-  { name: "TypeScript", level: 85 },
+  { name: "N8N", level: 85 },
   { name: "Node.js", level: 80 },
   { name: "Python", level: 75 },
-  { name: "PostgreSQL", level: 80 },
+  { name: "JAVA", level: 80 },
   { name: "Docker / DevOps", level: 70 },
 ];
 
@@ -37,8 +37,8 @@ const AboutSection = () => {
                 <span className="text-primary">const</span> dev = {"{"}
               </div>
               <div className="pl-6 space-y-1 font-mono text-sm">
-                <p><span className="text-primary">nome</span>: <span className="text-foreground">"Seu Nome Completo"</span>,</p>
-                <p><span className="text-primary">formação</span>: <span className="text-foreground">"Ciência da Computação"</span>,</p>
+                <p><span className="text-primary">nome</span>: <span className="text-foreground">"John Adam Milanez Maximino"</span>,</p>
+                <p><span className="text-primary">formação</span>: <span className="text-foreground">"Análise e Desenvolvimento de Sistemas"</span>,</p>
                 <p><span className="text-primary">graduação</span>: <span className="text-foreground">"2025"</span>,</p>
                 <p><span className="text-primary">localização</span>: <span className="text-foreground">"Brasil"</span>,</p>
                 <p><span className="text-primary">disponível</span>: <span className="text-primary">true</span>,</p>
@@ -47,8 +47,8 @@ const AboutSection = () => {
 
               <p className="text-muted-foreground mt-6 leading-relaxed text-sm">
                 Recém-graduado e apaixonado por tecnologia, transformo desafios complexos em soluções 
-                digitais elegantes. Busco sempre as melhores práticas e tecnologias mais modernas 
-                para entregar resultados que fazem a diferença.
+                digitais elegantes. Busco sempre as melhores práticas e soluções 
+                para entregar resultados que realmente fazem a diferença.
               </p>
             </div>
           </motion.div>
