@@ -31,7 +31,7 @@ const HeroSection = () => {
 
           {/* Tagline */}
           <p className="text-xl md:text-2xl font-light mb-2">
-            <span className="text-gradient font-semibold">Desenvolvedor Full Stack</span>
+            <span className="text-gradient font-semibold">Análise e Desenvolvimento de Soluções Digitais</span>
           </p>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
             Transformando ideias em soluções digitais escaláveis. 
