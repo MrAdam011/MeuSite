@@ -10,14 +10,14 @@ const projects = [
     color: "from-primary/20 to-primary/5",
   },
   {
-    title: "Dashboard Analytics",
-    description: "Painel de análise de dados em tempo real com gráficos interativos e relatórios.",
+    title: "Google meuNegócio",
+    description: "Atualizações do status da sua empresa para estar sempre recomendada pelo Google.",
     tags: ["Next.js", "Python", "D3.js", "AWS"],
     color: "from-primary/15 to-primary/5",
   },
   {
-    title: "App de Delivery",
-    description: "Aplicativo mobile de delivery com rastreamento em tempo real e chat integrado.",
+    title: "Chat Bot para Whatsapp",
+    description: "Atendimento ao publico em tempo real e chat integrado.",
     tags: ["React Native", "Firebase", "Maps API"],
     color: "from-primary/20 to-primary/5",
   },
