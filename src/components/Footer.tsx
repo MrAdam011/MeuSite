@@ -5,13 +5,13 @@ const Footer = () => {
     <footer className="border-t border-border py-8 px-6">
       <div className="container max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <span className="text-sm text-muted-foreground">
-          © 2025 <span className="text-gradient font-semibold">SeuNome</span>. Todos os direitos reservados.
+          © 2025 <span className="text-gradient font-semibold">ADAMTECH</span>. Todos os direitos reservados.
         </span>
 
         <div className="flex items-center gap-4">
           {[
             { icon: Github, href: "#" },
-            { icon: Linkedin, href: "#" },
+            { icon: Linkedin, href: "www.linkedin.com/in/john-adam-5b8b532b5" },
             { icon: Instagram, href: "#" },
           ].map((s, i) => (
             <a
