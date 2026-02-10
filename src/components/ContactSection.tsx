@@ -45,9 +45,9 @@ const ContactSection = () => {
 
             <div className="space-y-4">
               {[
-                { icon: Mail, label: "seuemail@exemplo.com" },
-                { icon: Phone, label: "+55 (00) 00000-0000" },
-                { icon: MapPin, label: "Sua Cidade, Brasil" },
+                { icon: Mail, label: "johnadammax@gmail.com" },
+                { icon: Phone, label: "+55 (11) 94808-9514" },
+                { icon: MapPin, label: "Campo-Maior, Brasil" },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center">
