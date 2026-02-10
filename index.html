@@ -13,6 +13,16 @@
 
   <body>
     <div id="root"></div>
+    <script>
+      // Restaura a rota original após redirecionamento do 404
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

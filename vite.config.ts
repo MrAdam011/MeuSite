@@ -5,7 +5,10 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/MeuSite/', // Troque '/' por '/nome-do-repositorio/' se necessário
+  // CONFIGURAÇÃO CORRETA PARA O REPOSITÓRIO "MeuSite"
+  // URL do site será: https://mradam011.github.io/MeuSite/
+  base: '/MeuSite/',
+  
   server: {
     host: "::",
     port: 8080,
